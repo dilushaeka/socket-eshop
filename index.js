@@ -70,6 +70,8 @@ io.on("connection", (socket) => {
     io.to(user?.socketId).emit("getMessage", message);
   });
 
+  //commit
+
   socket.on("messageSeen", ({ senderId, receiverId, messageId }) => {
     const user = getUser(senderId);
 
